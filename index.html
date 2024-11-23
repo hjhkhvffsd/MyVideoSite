@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Video Site</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyVidéoSite</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>My Video Site</h1>
-    </header>
-    <main>
-        <div class="video-container">
-            <video controls>
-                <source src="path/to/video.mp4" type="video/mp4">
-                Votre navigateur ne supporte pas la balise vidéo.
-            </video>
-            <div class="description">
-                <h2>Titre de la Vidéo</h2>
-                <p>Description de la vidéo ici.</p>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2024 My Video Site. Tous droits réservés.</p>
-    </footer>
-    <script src="app.js"></script>
+  <header>
+    <h1>Bienvenue sur MyVidéoSite</h1>
+  </header>
+
+  <main>
+    <section class="video-player">
+      <video id="main-video" controls>
+        <source src="assets/video1.mp4" type="video/mp4">
+        Ton navigateur ne supporte pas la vidéo.
+      </video>
+    </section>
+
+    <section class="video-list">
+      <h2>Vidéos populaires</h2>
+      <div class="video-thumbnail" onclick="changeVideo('assets/video1.mp4')">
+        <img src="assets/thumb_video1.jpg" alt="Vidéo 1">
+        <p>Vidéo 1</p>
+      </div>
+      <div class="video-thumbnail" onclick="changeVideo('assets/video2.mp4')">
+        <img src="assets/thumb_video2.jpg" alt="Vidéo 2">
+        <p>Vidéo 2</p>
+      </div>
+      <!-- Ajouter plus de vidéos ici -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 MyVidéoSite</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
